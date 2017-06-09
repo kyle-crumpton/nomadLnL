@@ -3,8 +3,9 @@ FROM golang:1.8
 WORKDIR /go/src/app
 COPY . /go/src/app
 
-RUN go get 
+RUN go get && \
+    go build
 
-ENTRYPOINT ["go"]
+ENTRYPOINT ["/go/bin/app"]
 
-CMD ["run", "main.go"]
+CMD []
