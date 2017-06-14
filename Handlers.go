@@ -30,6 +30,13 @@ func TodoShow(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintln(w, "Todo show:", todoId)
 }
 
+func LetsAddNumbers(w http.ResponseWriter, r *http.Request) {
+	vars := mux.Vars(r)
+	numOne := vars["numone"]
+	numTwo := vars["numtwo"]
+	fmt.Fprintln(w, "Sum: ", numOne+numTwo)
+}
+
 func Version(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintln(w, "Version: 0.0.1")
 }

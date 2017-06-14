@@ -38,4 +38,10 @@ var routes = Routes{
 		"/version",
 		Version,
 	},
+	Route{
+		"LetsAdd",
+		"GET",
+		"/addnums/{numone}/{numtwo}",
+		LetsAddNumbers,
+	},
 }
